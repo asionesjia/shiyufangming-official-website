@@ -7,12 +7,14 @@ import { useState } from 'react'
 import { Button } from './ui/Button'
 import { toast } from '@/ui/Toast'
 import {
-  DropdownMenu,
   DropdownMenuContent,
   DropdownMenuGroup,
-  DropdownMenuItem, DropdownMenuSeparator,
+  DropdownMenuItem,
+  DropdownMenuSeparator,
   DropdownMenuTrigger
 } from "@/ui/DropdownMenu";
+import {DropdownMenu} from "@radix-ui/react-dropdown-menu";
+
 
 const MobileMenu = () => {
   const { data: session } = useSession()

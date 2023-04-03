@@ -7,13 +7,9 @@ import { useRouter } from 'next/navigation'
 import { FC, useState } from 'react'
 import { Button } from './ui/Button'
 import { toast } from '@/ui/Toast'
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuSeparator,
-  DropdownMenuTrigger
-} from "@/ui/DropdownMenu";
+import {DropdownMenuContent, DropdownMenuItem, DropdownMenuSeparator, DropdownMenuTrigger} from "@/ui/DropdownMenu";
+import {DropdownMenu} from "@radix-ui/react-dropdown-menu";
+
 
 interface ApiKeyOptionsProps {
   // passing of entire object not allowed due to date property not being serializable

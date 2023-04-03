@@ -5,7 +5,8 @@ import { useTheme } from 'next-themes'
 
 import { Icons } from '@/components/Icons'
 import { Button } from '@/components/ui/Button'
-import {DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger} from "@/ui/DropdownMenu";
+import {DropdownMenu} from "@radix-ui/react-dropdown-menu";
+import {DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger} from "@/ui/DropdownMenu";
 
 export function ThemeToggle() {
   const { setTheme } = useTheme()
