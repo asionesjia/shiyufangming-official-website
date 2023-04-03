@@ -5,15 +5,14 @@ import { signOut, useSession } from 'next-auth/react'
 import Link from 'next/link'
 import { useState } from 'react'
 import { Button } from './ui/Button'
+import { toast } from '@/ui/Toast'
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuGroup,
-  DropdownMenuItem,
-  DropdownMenuSeparator,
-  DropdownMenuTrigger,
-} from './ui/DropdownMenu'
-import { toast } from '@/ui/Toast'
+  DropdownMenuItem, DropdownMenuSeparator,
+  DropdownMenuTrigger
+} from "@/ui/DropdownMenu";
 
 const MobileMenu = () => {
   const { data: session } = useSession()
