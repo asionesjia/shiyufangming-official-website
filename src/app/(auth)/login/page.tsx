@@ -4,9 +4,8 @@ import LargeHeading from '@/components/ui/LargeHeading'
 import Paragraph from '@/components/ui/Paragraph'
 import UserAuthForm from '@/components/UserAuthForm'
 import Link from 'next/link'
-import { FC } from 'react'
 
-const page: FC = () => {
+const page = () => {
   return (
     <>
       <div className='absolute inset-0 mx-auto container flex h-screen flex-col items-center justify-center'>

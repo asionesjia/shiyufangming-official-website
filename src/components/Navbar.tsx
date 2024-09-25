@@ -1,44 +1,37 @@
-import { authOptions } from '@/lib/auth'
-import { getServerSession } from 'next-auth'
 import Link from 'next/link'
-import { ThemeToggle } from './ThemeToggle'
 import { buttonVariants } from './ui/Button'
-import SignInButton from './ui/SignInButton'
-import SignOutButton from './ui/SignOutButton'
+import Image from "next/image";
+import LogoLight from "/public/logo-light.png";
+import LogoDark from "/public/logo-dark.png";
 
 const Navbar = async () => {
-  const session = await getServerSession(authOptions)
 
   return (
-    <div className='fixed backdrop-blur-sm bg-white/75 dark:bg-slate-900/75 z-50 top-0 left-0 right-0 h-20 border-b border-slate-300 dark:border-slate-700 shadow-sm flex items-center justify-between'>
-      <div className='container max-w-7xl mx-auto w-full flex justify-between items-center'>
-        <Link href='/' className={buttonVariants({ variant: 'link' })}>
-          Text Similarity v1.0
-        </Link>
-
-        <div className='md:hidden'>
-          <ThemeToggle />
+    <div className='fixed bg-transparent hover:bg-white/75 hover:backdrop-blur-sm z-50 top-0 left-0 right-0 h-20 hover:shadow-sm flex items-center justify-between'>
+      <div className='md:px-3 mx-auto w-full flex justify-between items-center'>
+        <div className={''}>
+          <Link href='/'>
+            <Image className={'hidden w-16'} src={LogoDark} alt={'世誉芳茗'}/>
+            <Image className={'dark:hidden w-16'} src={LogoLight} alt={'世誉芳茗'}/>
+          </Link>
         </div>
 
-        <div className='hidden md:flex gap-4'>
-          <ThemeToggle />
+        <div className='flex gap-4'>
           <Link
-            href='/documentation'
+            href='/'
             className={buttonVariants({ variant: 'ghost' })}>
-            Documentation
+            首页
           </Link>
-          {session ? (
-            <>
-              <Link
-                className={buttonVariants({ variant: 'ghost' })}
-                href='/dashboard'>
-                Dashboard
-              </Link>
-              <SignOutButton />
-            </>
-          ) : (
-            <SignInButton />
-          )}
+          <Link
+              href='/products'
+              className={buttonVariants({ variant: 'ghost' })}>
+            产品介绍
+          </Link>
+          <Link
+              href='/about'
+              className={buttonVariants({ variant: 'ghost' })}>
+            关于我们
+          </Link>
         </div>
       </div>
     </div>

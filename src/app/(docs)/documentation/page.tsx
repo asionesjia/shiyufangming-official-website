@@ -1,6 +1,5 @@
 import LargeHeading from '@/components/ui/LargeHeading'
 import Paragraph from '@/components/ui/Paragraph'
-import { FC } from 'react'
 import 'simplebar-react/dist/simplebar.min.css'
 
 import DocumentationTabs from '@/components/DocumentationTabs'
@@ -11,7 +10,7 @@ export const metadata: Metadata = {
   description: 'Free & open-source text similarity API',
 }
 
-const page: FC = () => {
+const page = () => {
   return (
     <div className='container max-w-7xl mx-auto mt-12'>
       <div className='flex flex-col items-center gap-6'>

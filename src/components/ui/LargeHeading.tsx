@@ -1,10 +1,10 @@
-import { FC } from 'react'
+import React, { FC } from 'react'
 
 import { cn } from '@/lib/utils'
 import { cva, VariantProps } from 'class-variance-authority'
 
 const headingVariants = cva(
-  'text-black dark:text-white text-center lg:text-left font-extrabold leading-tight tracking-tighter',
+  'text-black text-center lg:text-left font-extrabold leading-tight tracking-tighter',
   {
     variants: {
       size: {

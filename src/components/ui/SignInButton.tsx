@@ -30,7 +30,7 @@ const SignInButton: FC<SignInButtonProps> = ({}) => {
 
   return (
     <Button onClick={signInWithGoogle} isLoading={isLoading}>
-      Sign in
+      登陆
     </Button>
   )
 }

@@ -3,9 +3,9 @@ import { Toaster } from '@/ui/Toast'
 import '@/styles/globals.css'
 import { Inter } from 'next/font/google'
 
-import MobileMenu from '@/components/MobileMenu'
 import Providers from '@/components/Providers'
 import { cn } from '@/lib/utils'
+import Footer from "@/components/Footer";
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -16,17 +16,15 @@ export default function RootLayout({
 }) {
   return (
     <html
-      lang='en'
+      lang='zh-cn'
       className={cn('bg-white text-slate-900 antialiased', inter.className)}>
-      <body className='min-h-screen bg-slate-50 dark:bg-slate-900 antialiased'>
+      <body className='min-h-screen bg-slate-50 antialiased'>
         <Providers>
           {/* @ts-expect-error Server Component */}
           <Navbar />
           <Toaster position='bottom-right' />
-
-          <MobileMenu />
-
           <main>{children}</main>
+          <Footer/>
         </Providers>
 
         {/* Allow more height for mobile menu on mobile */}
