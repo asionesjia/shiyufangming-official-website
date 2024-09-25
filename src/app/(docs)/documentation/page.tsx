@@ -2,7 +2,6 @@ import LargeHeading from '@/components/ui/LargeHeading'
 import Paragraph from '@/components/ui/Paragraph'
 import 'simplebar-react/dist/simplebar.min.css'
 
-import DocumentationTabs from '@/components/DocumentationTabs'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
@@ -17,7 +16,6 @@ const page = () => {
         <LargeHeading>Making a request</LargeHeading>
         <Paragraph>api/v1/similarity</Paragraph>
 
-        <DocumentationTabs />
       </div>
     </div>
   )

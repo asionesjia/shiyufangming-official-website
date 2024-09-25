@@ -1,12 +1,3 @@
-import Image from 'next/image'
-import Link from 'next/link'
-import LargeHeading from '@/components/ui/LargeHeading'
-import Paragraph from '@/components/ui/Paragraph'
-import Image1 from '/public/index-1.jpg'
-import Image2 from '/public/index-2.jpg'
-import Image3 from '/public/index-3.jpg'
-import Image4 from '/public/index-4.png'
-
 import type { Metadata } from 'next'
 import IndexCarousel from "@/ui/IndexCarousel";
 
