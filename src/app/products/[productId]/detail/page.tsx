@@ -1,9 +1,6 @@
 'use client'
 
-import { FC } from 'react'
 import {useParams} from "next/navigation";
-import LargeHeading from "@/ui/LargeHeading";
-import Paragraph from "@/ui/Paragraph";
 import Image from "next/image";
 import * as Accordion from '@radix-ui/react-accordion';
 import * as Dialog from '@radix-ui/react-dialog';
@@ -12,13 +9,8 @@ import Image1 from "/public/index-1.jpg";
 import Image2 from "/public/index-2.jpg";
 import Image3 from "/public/index-3.jpg";
 import Image4 from "/public/index-4.png";
-import {Button} from "@/ui/Button";
 
-interface DetailsProps {
-
-}
-
-const Page: FC<DetailsProps> = ({}) => {
+const Page = ({}) => {
     const params = useParams();
     console.log(params)
     return <div className={'pt-16 w-full px-2 sm:px-6 md:px-12 lg:px-24'}>
@@ -85,7 +77,7 @@ const Page: FC<DetailsProps> = ({}) => {
                                     立即购买
                                 </div>
                             </Dialog.Trigger>
-                            <Dialog.Portal className={''}>
+                            <Dialog.Portal>
                                 <Dialog.Overlay className={'bg-black/75 fixed inset-0'} />
                                 <Dialog.Content className={'bg-white p-6 fixed z-50 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-11/12 max-w-4xl max-h-[95vh] overflow-auto'}>
                                     <Dialog.Title className={'text-slate-700 font-medium text-xl'}>
@@ -105,7 +97,7 @@ const Page: FC<DetailsProps> = ({}) => {
                                 <Dialog.Trigger className={'w-full'}>
                                     <div className={'relative w-full h-14 text-slate-800 cursor-pointer flex justify-center items-center border-2 border-slate-200 font-medium'}>联系客服</div>
                                 </Dialog.Trigger>
-                                <Dialog.Portal className={''}>
+                                <Dialog.Portal>
                                     <Dialog.Overlay className={'bg-black/75 fixed inset-0'} />
                                     <Dialog.Content className={'bg-white p-6 fixed z-50 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-11/12 max-w-4xl max-h-[95vh] overflow-auto'}>
                                         <Dialog.Title className={'text-slate-700 font-medium text-xl'}>
