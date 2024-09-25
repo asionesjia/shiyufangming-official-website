@@ -30,7 +30,6 @@ interface IndexCarouselProps {
 
 const IndexCarousel: FC<IndexCarouselProps> = () => {
     const [activeIndex, setActiveIndex] = useState<number>(0)
-    const [translateX, setTranslateX] = useState<number>(0)
     const [containerWidth, setContainerWidth] = useState<number>(0)
     const [scrollWidth, setScrollWidth] = useState<number>(0)
     const [scrollLeft, setScrollLeft] = useState<number>(0)
@@ -38,7 +37,6 @@ const IndexCarousel: FC<IndexCarouselProps> = () => {
 
     const slideRef = useRef<HTMLDivElement>(null)
 
-    const areasCopy = areas.slice()
 
     useEffect(() => {
         const handleResize = () => {
@@ -91,7 +89,7 @@ const IndexCarousel: FC<IndexCarouselProps> = () => {
                     <div className={'bg-white flex justify-end p-4 pr-16 pl-32 border-4 border-l-0 border-dark-green'}>
                         <LargeHeading
                             size='lg'
-                            className='three-d text-dark-green'>
+                            className='text-dark-green'>
                             传承千年茶文化 <br /> 从一而终
                         </LargeHeading>
                     </div>
